@@ -1,0 +1,20 @@
+# AI Avatar Video Replacement — default configuration
+
+device: auto            # auto | cuda | cpu | mps
+max_resolution: 1024    # longest edge; 0 = no downscale
+mask_feather: 15
+smoothing_alpha: 0.6    # higher = smoother motion, lower = sharper tracking
+diffusion_steps: 20
+
+tts_engine: coqui        # coqui | system (pyttsx3 fallback, lower quality)
+tts_voice: default
+whisper_model: base      # tiny | base | small | medium | large
+
+models:
+  sd_inpaint: runwayml/stable-diffusion-inpainting
+  controlnet_openpose: lllyasviel/control_v11p_sd15_openpose
+  ip_adapter: h94/IP-Adapter
+
+output:
+  codec: mp4v
+  fps: null   # null = match source

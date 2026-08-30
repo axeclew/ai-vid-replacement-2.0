@@ -1,0 +1,26 @@
+# Core
+numpy>=1.24.0
+opencv-python>=4.8.0
+Pillow>=10.0.0
+PyYAML>=6.0
+tqdm>=4.66.0
+
+# Pose tracking & background segmentation
+mediapipe>=0.10.9
+rembg>=2.0.50
+
+# Synthetic avatar rendering (pose-guided diffusion)
+torch>=2.1.0
+torchvision>=0.16.0
+diffusers>=0.27.0
+transformers>=4.38.0
+accelerate>=0.27.0
+safetensors>=0.4.0
+
+# Voice: transcription + synthetic TTS
+openai-whisper>=20231117
+TTS>=0.22.0        # Coqui TTS (higher quality synthetic voices)
+pyttsx3>=2.90       # fallback offline TTS if Coqui isn't installed
+
+# Web UI
+gradio>=4.20.0
